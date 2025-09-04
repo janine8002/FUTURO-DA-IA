@@ -18,4 +18,10 @@ const perguntas = [
 "B) Processamento de Linguagem Natural",  
         ]
 
-    }
+    },
+    {
+        enunciado: "A IA pode substituir o trabalho humano?",
+        alternativas: [
+            "A) Sim, em todas as áreas de trabalho",
+            "B) Não, ela pode substituir apenas tarefas repetitivas ou baseadas em padrões",
+    
