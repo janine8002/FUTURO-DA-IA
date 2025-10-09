@@ -73,7 +73,11 @@ const perguntas = [
     }
 
     function mostraResultado() {
-        caixaAlternativas.textContent = "Em 2049...";
+        caixaAlternativas.textContent = "Inteligência Artificial é um ramo da ciência da computação que desenvolve sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana. Exemplos:
+Reconhecer vozes ou rostos;
+Traduzir idiomas;
+Tomar decisões com base em dados;
+Conversar com pessoas";
         textoResultado.textContent = historiaFinal;
         caixaAlternativas.textContent = "";
     }
