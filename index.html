@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Corrigido o link para o CSS -->
     <title>Você decide o futuro da IA</title>
 </head>
 <body>
     <div class="caixa-principal">
         <h1>Você decide o futuro da IA</h1>
-        <div class="caixa-perguntas"></div>
-            <div class="caixa-alternativas"></div>
-                <div class="caixa-resultado">
-                    <p class="texto-resultado"></p>
-                </div>
+        <!-- Seção de perguntas -->
+        <div class="caixa-perguntas">
+            <p id="pergunta">Qual direção você acha que a IA deve seguir?</p>
+        </div>
+
+        <!-- Seção de alternativas -->
+        <div class="caixa-alternativas">
+            <button class="alternativa" onclick="mostrarResultado('A IA deve ser mais humanizada.')">Humanização da IA</button>
+            <button class="alternativa" onclick="mostrarResultado('A IA deve ser mais autônoma.')">Autonomia da IA</button>
+            <button class="alternativa" onclick="mostrarResultado('A IA deve ser usada apenas para tarefas específicas.')">IA para tarefas específicas</button>
+        </div>
+
+        <!-- Seção de resultado -->
+        <div class="caixa-resultado">
+            <p class="texto-resultado" id="resultado"></p>
+        </div>
     </div>
-     </body>
- <script scr="script.js"></script>
+
+    <script src="script.js"></script> <!-- Corrigido o 'src' -->
+</body>
 </html>
