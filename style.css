@@ -1,9 +1,10 @@
 :root {
-    --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
-    --cor-segundaria: #212333 ;
-    --cor-destaque: #2BDEFD ;
-    --cor-texto: #D7F9FF ;
+    --cor-fundo: #01080E;
+    --cor-principal: #0B0D20;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+    --fonte-principal: 'Poppins', sans-serif;
 }
 
 body {
@@ -13,30 +14,90 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 0;
 }
 
-.caixa-principal{
+.caixa-principal {
     background-color: var(--cor-principal);
     width: 90%;
     max-width: 600px;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(43, 222, 253, 0.2);
+    animation: aparecer 0.8s ease;
 }
 
-h1{
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
     color: var(--cor-destaque);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.caixa-perguntas {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 button {
-    background-color: var(--cor-segundaria);
+    background-color: var(--cor-secundaria);
     color: var(--cor-texto);
     border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover{
+button:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-principal);
+    transform: scale(1.05);
+}
+
+.caixa-resultado {
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.texto-resultado {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
 }
